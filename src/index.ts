@@ -46,6 +46,8 @@ const compile = async () => {
   // Save the created animation to the file under the given path.
   await animation.toFile(`compiled/example.anim`);
 
+  // Now run compilation: `npm run compile` or `yarn compile`.
+
   // GREAT! Now you can play the animation on https://icicles.intror.com/
 };
 

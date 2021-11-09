@@ -10,11 +10,14 @@ const compile = async () => {
   const icicles = new Icicles(iciclesCount, ledsPerIcicle);
   // Animation file representation
   const animation = new Animation({
+    // Animation name. This will be displayed inside the app.
     name: "Przykładowa animacja",
+    // This allows the compiler to try to optimize the frames to reduce their size
     optimize: true,
-    versionNumber: 1,
+    // Define current dimensions of icicles
     xCount: iciclesCount,
     yCount: ledsPerIcicle,
+    // How many times animation will be played
     loopsCount: 5,
   });
 
@@ -42,6 +45,7 @@ const compile = async () => {
   animateColorFromTopToBottom(Colors.orange);
   animateColorFromTopToBottom(Colors.oceanBlue);
   animateColorFromTopToBottom(Colors.lawnGreen);
+  animateColorFromTopToBottom(Colors.black);
 
   // Save the created animation to the file under the given path.
   await animation.toFile(`compiled/example.anim`);

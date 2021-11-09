@@ -2,10 +2,19 @@
   "name": "icicles-animation-js-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "icicles-animation": "github:led-icicles/icicles-animation-js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
 }
